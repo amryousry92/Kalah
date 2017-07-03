@@ -12,7 +12,23 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .circle {
+            .world {
+                width: 800px;
+                height: 600px;
+                position: absolute;
+                top:0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .board {
+                height: 100%;
+                margin-top: 0%;
+                margin-left: 10%;
+            }
+            .circle {
                 width: 50px;
                 height: 50px;
                 border-radius: 50%;
@@ -22,28 +38,101 @@ and open the template in the editor.
                 text-align: center;
                 background: #714448;
             }
+            .player-row-container {
+                list-style: none;
+            }
+            .player-row-container li {
+                float: left;
+                margin: 0 2px;
+            }
+            .rowNorth {
+                padding-top: 5px;
+                clear: both;
+            }
+            .rowSouth {
+                padding-top: 5px;
+                clear: both;
+                padding-left: 78px;
+            }
+            .circle-home {
+                float: left;
+                width: 70px;
+                height:70px;
+                font-size: 40px;
+
+            }
+            .message{
+                padding-top: 10px;
+                margin-top: 0px;
+            }
+            .south{
+                clear: both;
+                padding-left: 134px;
+                padding-top: 14px;
+                font-size: 30px;
+                margin-bottom: 0px;
+                color: blue;
+            }
+            .pointsSouth{
+                padding-left: 135px;
+                font-size: 24px;
+                margin-top: 2px;
+                color: blue;
+            }
+            .north{
+                width: 300px;
+                font-size: 30px;
+                margin-bottom: 0px;
+                color: blue;
+            }
+            .pointsNorth{
+                width: 300px;
+                margin-top: 0px;
+                color: blue;
+            }
     </style>
     </head>
     <body>
-        <div>
-            <h2> Player 1 board</h2>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            
-        </div>
-        <div>
-            <h2> Player 2 side</h2>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-        </div>
         
+        <section id="game" class="world">
+            <h1>KALAH GAME</h1>
+            <div class="message"><h2>play game </h2>
+            </div>
+            <div>
+                <h1 class="north">North Player</h1>
+                <h1 class="pointsNorth">0 stones captured</h1>
+            </div>
+            <section class="board">
+                <section class="rowNorth">
+                    <ul id="playerNorth" class="player-row-container">
+                        <li><div class="circle circle-home">0</div></li>
+                        <li><div class="circle" >6</div>
+                        <li><div class="circle" >6</div>
+                        <li><div class="circle" >6</div>
+                        <li><div class="circle" >6</div>
+                        <li><div class="circle" >6</div>
+                        <li><div class="circle" >6</div>
+                    </ul>
+                </section>
+                <section class="rowSouth">
+
+                    <ul id="playerSouth" class="player-row-container">
+                        <li><div class="circle">6</div>
+                        <li><div class="circle">6</div>
+                        <li><div class="circle">6</div>
+                        <li><div class="circle">6</div>
+                        <li><div class="circle">6</div>
+                        <li><div class="circle">6</div>
+                        <li><div class="circle circle-home">0</div>
+                    </ul>
+
+                </section>
+                <div>
+                    <h1 class="south">South Player</h1>
+                    <h1 class="pointsSouth">0 stones captured</h1>
+                </div>
+            </section>
+
+        </section>
     </body>
 </html>
