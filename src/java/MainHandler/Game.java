@@ -22,6 +22,7 @@ public class Game {
 
     // player1 is the one who initiated the move
     // pit is the index of the selected pit zero based
+    // function called whenever a player selects a pit to move all pebbles from 
     public static void move() {
         int[] pits1 = player1.getPits();
         int[] pits2 = player2.getPits();
@@ -79,6 +80,7 @@ public class Game {
         }
     }
 
+    // checks whether there is a winner or not yet
     public static boolean playGame() {
         playerTurn = player1.getIndex();
         while (playerTurn == player1.getIndex() || playerTurn == player2.getIndex()) {
